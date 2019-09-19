@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CG Formularz</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="form-wrapper">
+        <form class="form" action="">
+            <div class="form__card form__card--left">
+                <p class="form__title">Rejestracja do programu lojalnościowego</p>
+                <label for="name" class="form__label">Imię:</label>
+                <input type="text" class="form__input" name="name" id="name" required="required">
+                <label for="lastname" class="form__label">Nazwisko:</label>
+                <input type="text" class="form__input" name="lastname" id="lastname" required="required">
+                <label for="email" class="form__label">Email:</label>
+                <input type="email" class="form__input" name="email" id="email" required="required">
+                <label for="telNumber" class="form__label">Telefon:</label>
+                <input type="tel" class="form__input" name="tel" id="telNumber" required="required">
+                <div class="checkbox-wrapper">
+                    <input type="checkbox" name="" id="form_company_checkbox">
+                    <label for="form_company_checkbox" class="checkboxLabel">Chcę dopisać do karty swoją firmę</label>
+                </div>
+                <div class="form__company">
+                    <div class="form__company--flex">
+                        <label for="companyName" class="form__label">Nazwa firmy:</label>
+                        <input type="text" class="form__input" name="companyName" id="companyName" optional>
+                        <label for="companyAddress" class="form__label">Adres firmy:</label>
+                        <input type="text" class="form__input" name="companyAddress" id="companyAddress" optional>
+                        <label for="postCode" class="form__label">Kod pocztowy:</label>
+                        <input type="text" class="form__input" name="postCode" id="postCode" optional maxlength="6" pattern="^[0-9]{2}-[0-9]{3}$">
+                        <label for="city" class="form__label">Miejscowość:</label>
+                        <input type="text" class="form__input" name="city" id="city" optional>
+                        <label for="nip" class="form__label">NIP:</label>
+                        <input type="text" class="form__input" name="nip" id="nip" optional>
+                        <label for="trade" class="form__label">Branża:</label>
+                        <select type="text" class="form__input" name="trade" id="trade" optional>
+                            <option value="0">Agencja Rządowa</option>
+                            <option value="1">Branża edukacyjna (profesorowie, studenci, uczelnie, szkoły)</option>
+                            <option value="2">Branża farmaceutyczna</option>
+                            <option value="3">Branża finansowa (banki, biura inwestycyjne, firmy ubezpieczeniowe)
+                            </option>
+                            <option value="4">Branża komputerowa (producenci sprzętu lub oprogramowania)</option>
+                            <option value="5">Branża reklamowa (reklama, marketing, Public Relations)</option>
+                            <option value="6">Branża restauracyjna</option>
+                            <option value="7">Branża turystyczna</option>
+                            <option value="8">Drukowanie, kopiowanie, reprografia (publikowanie)</option>
+                            <option value="9">Federacja sportowa</option>
+                            <option value="10">Firma architektoniczna, inżynierska lub projektowa</option>
+                            <option value="11">Firma budowlana - podwykonawca</option>
+                            <option value="12">Firma budowlana - generalny wykonawca</option>
+                            <option value="13">Firma budowlana - wznoszenie domów mieszkalnych</option>
+                            <option value="14">Firma konsultingowa</option>
+                            <option value="15">Firma księgowa</option>
+                            <option value="16">Firma prawnicza</option>
+                            <option value="17">Firma produkcyjna</option>
+                            <option value="18">Organizacja wystaw, targów, spotkań, konferencji, konwencji</option>
+                            <option value="19">Sprzedaż nieruchomości</option>
+                            <option value="20">Sprzedaż detaliczna</option>
+                            <option value="21">Studio graficzne</option>
+                            <option value="22">Zarządzanie nieruchomościami</option>
+                            <option value="23">Inna</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form__card form__card--right">
+                <div class="termsInfo">
+                    Dane osobowe podane w formularzu będą przetwarzane zgodnie z Rozporządzeniem Parlamentu
+                    Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w
+                    związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz
+                    uchylenia dyrektywy 95/46/WE (ogólne rozporządzenie o ochronie danych.) Administratorem danych
+                    osobowych podanych w Formularzu jest Copy General sp. z o.o. z siedzibą w Warszawie, ul. Usypiskowa
+                    1, numer KRS: 0000170230. Podanie danych jest dobrowolne. Administrator przetwarza dane zgodnie z
+                    Polityką Prywatności. Mam prawo dostępu do danych, sprostowania, usunięcia lub ograniczenia
+                    przetwarzania, prawo sprzeciwu, prawo wniesienia skargi do organu.
+                </div>
+                <div class="termsChecks">
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" name="" id="user_registration_form" required="required">
+                        <label for="user_registration_form" class="checkboxLabel">Zapoznałem się i akceptuję <a href="https://copygeneral.pl/article/regulamin">Regulamin</a>
+                            oraz <a href="https://copygeneral.pl/article/polityka-prywatnosci">Politykę prywatności</a> sklepu Copy General.</label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" name="" id="user_registration_form_agreement1">
+                        <label for="user_registration_form_agreement1" class="checkboxLabel">Wyrażam zgodę na
+                            otrzymywanie od Copy General sp.
+                            z
+                            o.o. z siedzibą w Warszawie przy ul. Usypiskowej 1, 02-386 Warszawa, drogą elektroniczną na
+                            wskazany przeze mnie w formularzu adres e-mail informacji handlowych, dotyczących produktów
+                            i
+                            usług oferowanych przez Copy General sp. z o.o. W tym samym celu podane dane osobowe mogą
+                            być
+                            przekazywane podwykonawcom wspierającym administratora w świadczeniu usług
+                            marketingowych.</label>
+                    </div>
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" name="" id="user_registration_form_agreement2">
+                        <label for="user_registration_form_agreement2" class="checkboxLabel">Wyrażam zgodę na
+                            przekazywanie przez Copy General
+                            sp.
+                            z o.o. z siedzibą w Warszawie przy ul. Usypiskowej 1, 02-386 Warszawa, treści, dotyczących
+                            oferty Copy General na podany przeze mnie numer telefonu, w tym przy użyciu automatycznych
+                            systemów wywołujących w rozumieniu ustawy z dnia 16 lipca 2004 r. Prawo telekomunikacyjne
+                            (Dz. U
+                            z 2014 r. poz. 243 ze zm.).W tym samym celu podane dane osobowe mogą być przekazywane
+                            podwykonawcom wspierającym administratora w świadczeniu usług marketingowych.</label>
+                    </div>
+                </div>
+                <button class="form__submit">Zarejestruj</button>
+            </div>
+        </form>
+    </div>
+    <div class="alert-div"></div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
