@@ -10,8 +10,8 @@ if(isset($name) && isset($lastname) && isset($email) && isset($tel)) {
     $message = 'Zarejestrowano'; // UZUPEŁNIĆ
 
     if (mail($mailTo, $subject, $message)) {
-        echo "success";
+        echo "Formularz został wysłany. Skontaktujemy się w najbliższym czasie.";
     } else {
-        echo "error";
+        echo "Błąd przy wysyłaniu formularza. Spróbuj ponownie później";
     }
 }
