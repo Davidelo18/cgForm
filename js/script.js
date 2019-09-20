@@ -3,6 +3,8 @@ $(document).ready(function() {
     var companyFormDiv = $('.form__company');
     var rightCard = $('.form__card--right');
 
+    var companyInputsWrapper = document.querySelectorAll('#companyInputsWrapper input');
+
     companyCheckbox.prop('checked', false);
     
     companyCheckbox.click(function() {
@@ -11,10 +13,18 @@ $(document).ready(function() {
                 companyFormDiv.fadeIn();
                 var marginTopRigthCard = rightCard[0].scrollHeight / 4;
                 rightCard.animate({'margin-top': marginTopRigthCard}, 500);
+
+                for(i = 0; i < companyInputsWrapper.length; ++i) {
+                    companyInputsWrapper[i].required = true;
+                }
                 break;
             case false:
                 companyFormDiv.fadeOut();
                 rightCard.animate({'margin-top': ''}, 500);
+
+                for(i = 0; i < companyInputsWrapper.length; ++i) {
+                    companyInputsWrapper[i].required = false;
+                }
                 break;
             default:
                 return;
@@ -34,16 +44,20 @@ $(document).ready(function() {
     // formularz
 
     var formRegisterProgram = $('#formRegisterProgram');
+    var subButton = $('#submitBtn')[0];
+    var formStatus = $('#formStatus')[0];
     
+    console.log(formStatus);
     formRegisterProgram.on('submit', function(e) {
         e.preventDefault();
+        formStatus.innerHTML = "Wysyłanie...";
+        subButton.disabled = true;
 
         var name = $('#name').val();
         var lastname = $('#lastname').val();
         var email = $('#email').val();
         var telNumber = $('#telNumber').val();
 
-/*
         var formdata = new FormData();
         formdata.append("name", name);
         formdata.append("lastname", lastname);
@@ -68,14 +82,15 @@ $(document).ready(function() {
         xhr.open("POST", '../formSubmit.php');
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4 && xhr.status == 200) {
-                if (xhr.responseText == "success") {
-
+                if (xhr.responseText == "Formularz został wysłany. Skontaktujemy się w najbliższym czasie.") {
+                    formStatus.innerHTML = xhr.responseText;
+                    subButton.disabled = false;
                 } else {
-
+                    formStatus.innerHTML = xhr.responseText;
+                    subButton.disabled = false;
                 }
             }
         }
         xhr.send(formdata);
-        */
     });
 });
