@@ -104,6 +104,12 @@ a:hover {
   border-color: #384db0;
 }
 
+.form__status {
+  text-align: center;
+  padding: 10px 0;
+  color: #BE0B10;
+}
+
 .form__company {
     display: none;
 }
