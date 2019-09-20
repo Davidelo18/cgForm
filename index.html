@@ -28,7 +28,7 @@
                     <label for="form_company_checkbox" class="checkboxLabel">Chcę dopisać do karty swoją firmę</label>
                 </div>
                 <div class="form__company">
-                    <div class="form__company--flex">
+                    <div class="form__company--flex" id='companyInputsWrapper'>
                         <label for="companyName" class="form__label">Nazwa firmy:</label>
                         <input type="text" class="form__input" name="companyName" id="companyName" optional>
                         <label for="companyAddress" class="form__label">Adres firmy:</label>
@@ -113,7 +113,8 @@
                             podwykonawcom wspierającym administratora w świadczeniu usług marketingowych.</label>
                     </div>
                 </div>
-                <button class="form__submit">Zarejestruj</button>
+                <button class="form__submit" id="submitBtn">Zarejestruj</button>
+                <span class="form__status" id="formStatus"></span>
             </div>
         </form>
     </div>
